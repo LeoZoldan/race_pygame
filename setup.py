@@ -3,10 +3,10 @@ import cx_Freeze
 executaveis = [ 
                cx_Freeze.Executable(script="main.py", icon="assets/icon.ico") ]
 cx_Freeze.setup(
-    name = "Iron Man",
+    name = "Jogo de Carro",
     options={
         "build_exe":{
-            "packages":["pygame"],
+            "packages":["pygame", "speech_recognition", "pyttsx3"],
             "include_files":["assets"]
         }
     }, executables = executaveis
