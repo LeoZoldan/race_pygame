@@ -1,5 +1,5 @@
 import pygame
-import recursos.config as config
+import src.config as config
 
 class Car:
     def __init__(self, path, game_resulution, direction = "up"):

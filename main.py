@@ -1,3 +1,3 @@
-from recursos.game import start
+from src.game import start
 
 start()

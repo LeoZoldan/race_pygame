@@ -1,13 +1,13 @@
 # pip install cx_freeze
 import cx_Freeze
 executaveis = [ 
-               cx_Freeze.Executable(script="main.py", icon="assets/icon.ico") ]
+               cx_Freeze.Executable(script="main.py", icon="recursos/icon.ico") ]
 cx_Freeze.setup(
     name = "Jogo de Carro",
     options={
         "build_exe":{
             "packages":["pygame", "speech_recognition", "pyttsx3"],
-            "include_files":["assets"]
+            "include_files":["recursos"]
         }
     }, executables = executaveis
 )

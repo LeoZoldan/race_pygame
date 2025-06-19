@@ -1,47 +1,47 @@
 import pygame
 import random
-import recursos.config as config
-from recursos.car import Car
-from recursos.functions import writeData, getData
-import recursos.input_voice as iv
+import src.config as config
+from src.car import Car
+from src.functions import writeData, getData
+import src.input_voice as iv
 
 
 pygame.init()
 clock = pygame.time.Clock()
 window = pygame.display.set_mode(config.game_resolution) 
-pygame.display.set_caption("Need 4 Python")
+pygame.display.set_caption("Jogo de Carro")
 
 
 # icons
-icon  = pygame.image.load("assets/icon.png")
+icon  = pygame.image.load("recursos/icon.png")
 pygame.display.set_icon(icon)
 
 ## cars
-red_car = Car("assets/red_car.png", config.game_resolution)
-purple_car = Car("assets/purple_car.png", config.game_resolution)
-yellow_car = Car("assets/yellow_car.png", config.game_resolution)
-blue_car = Car("assets/blue_car.png", config.game_resolution)
+red_car = Car("recursos/red_car.png", config.game_resolution)
+purple_car = Car("recursos/purple_car.png", config.game_resolution)
+yellow_car = Car("recursos/yellow_car.png", config.game_resolution)
+blue_car = Car("recursos/blue_car.png", config.game_resolution)
 enemy_cars = (purple_car, yellow_car, blue_car)
 
 
 # backgrounds
-home_background = pygame.transform.smoothscale(pygame.image.load("assets/home_background.png"), config.game_resolution)
-endgame_background = pygame.transform.smoothscale(pygame.image.load("assets/car_crashed.png"), config.game_resolution)
+home_background = pygame.transform.smoothscale(pygame.image.load("recursos/home_background.png"), config.game_resolution)
+endgame_background = pygame.transform.smoothscale(pygame.image.load("recursos/car_crashed.png"), config.game_resolution)
 
-road_background_1 = pygame.image.load("assets/road_big.png")
-road_background_2 = pygame.transform.rotate(pygame.image.load("assets/road_big.png"), 180)
+road_background_1 = pygame.image.load("recursos/road_big.png")
+road_background_2 = pygame.transform.rotate(pygame.image.load("recursos/road_big.png"), 180)
 
 
 ## sounds
-pygame.mixer.music.load("assets/nfs_theme.mp3")
+pygame.mixer.music.load("recursos/nfs_theme.mp3")
 pygame.mixer.music.set_volume(0.2)
 pygame.mixer.music.fadeout(3000)
 pygame.mixer.music.play(-1, fade_ms=2000)
 
-race_car_passing = pygame.mixer.Sound("assets/race_car_passing.mp3")
+race_car_passing = pygame.mixer.Sound("recursos/race_car_passing.mp3")
 race_car_passing.set_volume(0.05)
 
-crashSound = pygame.mixer.Sound("assets/crash.mp3")
+crashSound = pygame.mixer.Sound("recursos/crash.mp3")
 crashSound.set_volume(0.2)
 
 
