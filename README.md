@@ -26,4 +26,4 @@ Para buildar o projeto você precisa:
 
 
 ## Sobre
-- Desenvolvedor: Leronardo Felipe Zoldan - 1138725
+- Desenvolvedor: Leo Felipe Zoldan - 1138725
